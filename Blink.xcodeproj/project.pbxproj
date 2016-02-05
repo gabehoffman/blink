@@ -15,6 +15,7 @@
 		3D41E3691C65313100DBFA77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D41E3671C65313100DBFA77 /* LaunchScreen.storyboard */; };
 		3D41E3741C65313100DBFA77 /* BlinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D41E3731C65313100DBFA77 /* BlinkTests.swift */; };
 		3D41E37F1C65313100DBFA77 /* BlinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D41E37E1C65313100DBFA77 /* BlinkUITests.swift */; };
+		3D41E38D1C653E1A00DBFA77 /* BlinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D41E38C1C653E1A00DBFA77 /* BlinkModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3D41E37A1C65313100DBFA77 /* BlinkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlinkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D41E37E1C65313100DBFA77 /* BlinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkUITests.swift; sourceTree = "<group>"; };
 		3D41E3801C65313100DBFA77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D41E38C1C653E1A00DBFA77 /* BlinkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlinkModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				3D41E35B1C65313100DBFA77 /* AppDelegate.swift */,
-				3D41E35D1C65313100DBFA77 /* ViewController.swift */,
 				3D41E35F1C65313100DBFA77 /* Main.storyboard */,
-				3D41E3651C65313100DBFA77 /* Assets.xcassets */,
 				3D41E3671C65313100DBFA77 /* LaunchScreen.storyboard */,
 				3D41E36A1C65313100DBFA77 /* Info.plist */,
+				3D41E3651C65313100DBFA77 /* Assets.xcassets */,
 				3D41E3621C65313100DBFA77 /* Blink.xcdatamodeld */,
+				3D41E35D1C65313100DBFA77 /* ViewController.swift */,
+				3D41E38C1C653E1A00DBFA77 /* BlinkModel.swift */,
 			);
 			path = Blink;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				3D41E35E1C65313100DBFA77 /* ViewController.swift in Sources */,
 				3D41E3641C65313100DBFA77 /* Blink.xcdatamodeld in Sources */,
+				3D41E38D1C653E1A00DBFA77 /* BlinkModel.swift in Sources */,
 				3D41E35C1C65313100DBFA77 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
