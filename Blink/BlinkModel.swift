@@ -39,10 +39,10 @@ class BlinkModel {
         yAxis = "Individual"
         
         for i in 1...6 {
-            questions.append("How do you rate yourself in regard to \(xAxis) Question \(i)")
+            questions.append("\(xAxis) Question \(i)- How do you rate yourself in regard to this area?")
             answers.append(5)
             
-            questions.append("How do you rate yourself in regard to \(yAxis) Question \(i)")
+            questions.append("\(yAxis) Question \(i)- How do you rate yourself in regard to this area?")
             answers.append(5)
         }
     

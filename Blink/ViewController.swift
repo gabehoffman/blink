@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         
         // Go to next question/answer
         blink.next()
-        animateLabelTransitions()
+        animateLabelTransitions(false)
     }
     
     @IBAction func swipeNextQuestion(sender: AnyObject) {
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         
         // Go to previous question/answer
         blink.previous()
-        animateLabelTransitions()
+        animateLabelTransitions(true)
     }
     
     @IBAction func sliderValueChanged(sender: UISlider) {
@@ -65,12 +65,16 @@ class ViewController: UIViewController {
         
         currentQuestionLabel.text = blink.questions[0]
         answerLabel.text = "\(blink.currentAnswer)"
-        updateOffScreenLabel()
+        updateOffScreenLabel(false)
     }
     
-    func updateOffScreenLabel() {
+    func updateOffScreenLabel(reverse: Bool) {
         let screenwidth = view.frame.width
-        nextQuestionLabelCenterXConstraint.constant = -screenwidth
+        if reverse {
+            nextQuestionLabelCenterXConstraint.constant += screenwidth
+        } else {
+            nextQuestionLabelCenterXConstraint.constant = -screenwidth
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -85,17 +89,22 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func animateLabelTransitions() {
+    func animateLabelTransitions(reverse: Bool) {
         view.layoutIfNeeded()
         
         // Animate the alpha and the center X contraints
         let screenWidth = view.frame.width
-        self.nextQuestionLabelCenterXConstraint.constant = 0
-        self.currentQuestionLabelCenterXConstraint.constant += screenWidth
+        if reverse {
+            self.nextQuestionLabelCenterXConstraint.constant = 0
+            self.currentQuestionLabelCenterXConstraint.constant -= screenWidth
+        } else {
+            self.nextQuestionLabelCenterXConstraint.constant = 0
+            self.currentQuestionLabelCenterXConstraint.constant += screenWidth
+        }
         
         UIView.animateWithDuration(0.5,
             delay: 0,
-            usingSpringWithDamping: 0.6,
+            usingSpringWithDamping: 1,
             initialSpringVelocity: 0.5,
             options: [.CurveLinear],
             animations: {
@@ -108,7 +117,7 @@ class ViewController: UIViewController {
                 swap(&self.currentQuestionLabel, &self.nextQuestionLabel)
                 swap(&self.currentQuestionLabelCenterXConstraint, &self.nextQuestionLabelCenterXConstraint)
                 
-                self.updateOffScreenLabel()
+                self.updateOffScreenLabel(reverse)
         })
     }
 }
