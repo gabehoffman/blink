@@ -16,6 +16,9 @@ extension Question: JSONDecodable {
         id = try value.int("id")
         do {
             answer = try value.int("default")
+            if answer < 0 {
+                answer = Int( arc4random_uniform(10) + 1 )
+            }
         } catch {
             answer = 0
         }
@@ -24,6 +27,7 @@ extension Question: JSONDecodable {
         } catch {
             weight = 1
         }
+        defaultValue = answer
     }
 }
 
@@ -32,6 +36,7 @@ extension Question: JSONEncodable {
         return .Dictionary( [   "question":     .String(text),
                                 "answer":       .Int(answer),
                                 "id":           .Int(id),
+                                "default":      .Int(defaultValue),
                                 "weight":       .Int(weight)
                             ])
     }

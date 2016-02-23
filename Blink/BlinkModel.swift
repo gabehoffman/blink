@@ -49,13 +49,13 @@ class BlinkModel {
             self.type = Graph.makeShape(shape)
             print(type)
             self.questions = try json.array("questions").map(Question.init)
-            print(questions)
+            //print(questions)
             self.results = try json.array("results").map(Result.init)
-            print(results)
+            //print(results)
             self.axis = try json.array("axis").map(Axis.init)
-            print(axis)
+            //print(axis)
             self.graph = Graph(type: self.type, axis: axis, questions: self.questions, results: self.results)
-            print(graph)
+            //print(graph)
         } catch {
             print("POSSIBLY FATAL ERROR: \(error)")
             title = "ERROR LOADING JSON"

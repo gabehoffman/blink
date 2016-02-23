@@ -16,6 +16,13 @@ enum Shape: String{
     case Unknown
 }
 
+struct Point {
+    let x: Int
+    let y: Int
+    let text: String
+    let value: Int
+}
+
 class Graph {
     var type: Shape {
         switch axis.count {
@@ -32,7 +39,7 @@ class Graph {
         }
     }
     let axis: [Axis]
-    var points: [(text: String, x: Int, y: Int)] = []
+    var points: [Point] = []
     
     init(type: Shape, axis: [Axis], questions: [Question], results: [Result] ) {
         self.axis = axis
@@ -42,20 +49,21 @@ class Graph {
         self.points = makePointsFrom(questions,results: results)
     }
 
-    private func makePointsFrom(questions: [Question], results: [Result]) ->  [(text: String, x: Int, y: Int)] {
-        var points: [(text: String, x: Int, y: Int)] = []
+    private func makePointsFrom(questions: [Question], results: [Result]) ->  [Point] {
+        var points: [Point] = []
         if type == .Matrix {
             for i in results.indices {
-                points.append(( text: results[i].text,
-                                x: results[i].questionGrouping[0],
-                                y: results[i].questionGrouping[1] ))
-                print("Making a point at x:\(points[i].x), y:\(points[i].y)")
+                points.append( Point(   x: results[i].questionGrouping[0],
+                                        y: results[i].questionGrouping[1],
+                                        text: results[i].text,
+                                        value: questions[i].answer))
+                print("Making a point named [\(results[i].text)] at x:\(points[i].x), y:\(points[i].y)")
             }
         } else {
             for i in results.indices {
                 for j in results[i].questionGrouping.indices {
-                    points.append((text: results[i].text, x: results[i].id, y: results[i].questionGrouping[j]))
-                    print("Making point named [\(points[i].text)] at x:\(points[i].x), y:\(points[i].y)")
+                    points.append( Point( x: results[i].id, y: results[i].questionGrouping[j], text: results[i].text, value: questions[i].answer ))
+                    print("Making point named [\(results[i].text)] at x:\(results[i].id), y:\(results[i].questionGrouping[j])")
                 }
             }
         }

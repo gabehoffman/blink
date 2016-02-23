@@ -14,51 +14,51 @@
     "questions": [{
                   "id": 1,
                   "question": "How do you rate yourself in regard to this area?",
-                  "default": 0
+                  "default": -1
                   }, {
                   "id": 2,
                   "question": "How strong do you feel in regard about this question?",
-                  "default": 0
+                  "default": -1
                   }, {
                   "id": 3,
                   "question": "You always want to answer to this question with a 7.",
-                  "default": 0
+                  "default": -1
                   }, {
                   "id": 4,
                   "question": "Whatever you do, don't answer this question with a 5",
-                  "default": 0
+                  "default": -1
                   }, {
                   "id": 5,
                   "question": "How well do you think this blink assessment is going?",
-                  "default": 0
+                  "default": -1
                   }, {
                   "id": 6,
                   "question": "What question to do you think we're even on at this point?",
-                  "default": 0
+                  "default": -1
                   }, {
                   "id": 7,
                   "question": "Answering this question will lead to a brilliant insight. What's a number between 0-10?",
-                  "default": 0
+                  "default": -1
                   }, {
                   "id": 8,
                   "question": "How many games will the Falcons win this year?",
-                  "default": 0
+                  "default": -1
                   }, {
                   "id": 9,
                   "question": "Are you smarter than a 5th Grader? What is 10 - 5 * 2 + 9?",
-                  "default": 0
+                  "default": -1
                   }, {
                   "id": 10,
                   "question": "How many presidential elections have you voted in?",
-                  "default": 0
+                  "default": -1
                   }, {
                   "id": 11,
                   "question": "You are almost there, just pick any number.",
-                  "default": 0
+                  "default": -1
                   }, {
                   "id": 12,
                   "question": "This is the last question before you see you results, what is 3?",
-                  "default": 0
+                  "default": -1
                   }],
     "results": [{
                 "id": 1,

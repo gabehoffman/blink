@@ -31,6 +31,8 @@
 		3DAE3A3D1C6F82940039461D /* DataURLLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE3A3C1C6F82940039461D /* DataURLLoadable.swift */; };
 		3DAE3A411C6F84C80039461D /* QuestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE3A401C6F84C80039461D /* QuestionListViewController.swift */; };
 		7D98E49F657DCC4F9BA7BBB4 /* Pods_Blink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EF75724A2D748549F51ED3 /* Pods_Blink.framework */; };
+		9FBE4AB61C7D050B008CD61E /* genericRandomized.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FBE4AB51C7D050B008CD61E /* genericRandomized.json */; };
+		9FBE4AB81C7D09E6008CD61E /* QuestionListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE4AB71C7D09E6008CD61E /* QuestionListViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		3DAE3A3C1C6F82940039461D /* DataURLLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataURLLoadable.swift; sourceTree = "<group>"; };
 		3DAE3A401C6F84C80039461D /* QuestionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionListViewController.swift; sourceTree = "<group>"; };
 		8789990DD4201E05DAC8A742 /* Pods-Blink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blink.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blink/Pods-Blink.release.xcconfig"; sourceTree = "<group>"; };
+		9FBE4AB51C7D050B008CD61E /* genericRandomized.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = genericRandomized.json; sourceTree = "<group>"; };
+		9FBE4AB71C7D09E6008CD61E /* QuestionListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionListViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,7 @@
 				3DAE3A351C6E5A140039461D /* empty.json */,
 				3DAE3A371C6E5A8D0039461D /* generic.json */,
 				3D76492D1C7372A000305620 /* triangleTest.json */,
+				9FBE4AB51C7D050B008CD61E /* genericRandomized.json */,
 			);
 			name = "Sample JSON";
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				3DAE3A401C6F84C80039461D /* QuestionListViewController.swift */,
+				9FBE4AB71C7D09E6008CD61E /* QuestionListViewCell.swift */,
 			);
 			name = "Question Lists";
 			sourceTree = "<group>";
@@ -368,6 +374,7 @@
 				3DAE3A361C6E5A140039461D /* empty.json in Resources */,
 				3D41E3661C65313100DBFA77 /* Assets.xcassets in Resources */,
 				3DAE3A381C6E5A8D0039461D /* generic.json in Resources */,
+				9FBE4AB61C7D050B008CD61E /* genericRandomized.json in Resources */,
 				3D41E3611C65313100DBFA77 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +452,7 @@
 				3D7649381C73A04100305620 /* Graph.swift in Sources */,
 				3D76493A1C74BA0E00305620 /* Axis.swift in Sources */,
 				3DAE3A3A1C6E96010039461D /* MenuViewController.swift in Sources */,
+				9FBE4AB81C7D09E6008CD61E /* QuestionListViewCell.swift in Sources */,
 				3D41E3641C65313100DBFA77 /* Blink.xcdatamodeld in Sources */,
 				3D7649321C737FDE00305620 /* Question+Freddy.swift in Sources */,
 				3D7649301C737E2200305620 /* Question.swift in Sources */,
@@ -598,6 +606,7 @@
 			baseConfigurationReference = 25FE9BC16D105958A316D30C /* Pods-Blink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Blink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tools.hoffman.Blink;
@@ -610,6 +619,7 @@
 			baseConfigurationReference = 8789990DD4201E05DAC8A742 /* Pods-Blink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Blink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tools.hoffman.Blink;

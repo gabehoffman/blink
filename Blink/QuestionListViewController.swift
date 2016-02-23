@@ -41,9 +41,19 @@ extension QuestionListViewController { // UITableViewDataSource
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Basic", forIndexPath: indexPath)
+        // Get a new or recycled cell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Question", forIndexPath: indexPath) as! QuestionListViewCell
+        
+        // Update the labels for the new preferred text size
+        cell.updateLabels()
+        
+        // Get the questions for the item that is at the nth index of items, where n = row this cell will appear in on the tableview
         let question = self.blink.questions[indexPath.row]
-        cell.textLabel?.text = question.text
+        
+        // Configure the cell with the question.info
+        cell.questionTextLabel?.text = "\(question.text)"
+        cell.questionNumberLabel?.text = "\(question.id))"
+        cell.questionValueLabel?.text = "[\(question.answer)]"
         return cell
     }
     

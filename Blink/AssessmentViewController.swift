@@ -9,8 +9,9 @@
 import UIKit
 import Freddy
 
-class AssessmentViewController: UIViewController {
+class AssessmentViewController: UIViewController, DataURLLoadable {
     
+    var dataURL: NSURL?
     var blink: BlinkModel!
     
     @IBOutlet var currentQuestionLabel: UILabel!
@@ -64,7 +65,6 @@ class AssessmentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let dataURL = NSBundle.mainBundle().URLForResource("generic", withExtension: "json")
         if let data = getDataFromFileURL(dataURL) {
             do {
                 let json = try JSON(data: data)
@@ -80,6 +80,7 @@ class AssessmentViewController: UIViewController {
         
         currentQuestionLabel.text = blink.questions[0].text
         answerLabel.text = "\(blink.currentAnswer)"
+        answerSlider.setValue(Float(blink.currentAnswer), animated: true)
         updateOffScreenLabel(false)
     }
     

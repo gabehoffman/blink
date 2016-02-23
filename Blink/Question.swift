@@ -12,12 +12,14 @@ struct Question {
     let text: String
     var answer: Int
     let id: Int
+    let defaultValue: Int
     let weight: Int
     
-    init(text: String, answer: Int, id: Int, weight: Int) {
+    init(text: String, answer: Int, id: Int, defaultValue: Int, weight: Int) {
         self.text = text
         self.answer = answer
         self.id = id
+        self.defaultValue = defaultValue
         self.weight = 1
     }
 }
