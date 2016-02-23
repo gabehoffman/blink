@@ -7,45 +7,64 @@
 //
 
 import UIKit
+import Freddy
 
 class BlinkModel {
     
-    var questions: [String] = []
-    var answers: [Int] = []
-    let xAxis: String
-    let yAxis: String
+    var title: String
+    var type: Shape
+    var questions: [Question] = []
+    var results: [Result] = []
+    var axis: [Axis] = []
+    var graph: Graph?
+    
     var currentQuestionIndex = 0
     var currentQuestion: String {
-        return questions[currentQuestionIndex]
+        return questions[currentQuestionIndex].text
     }
     var currentAnswer: Int {
-        return answers[currentQuestionIndex]
+        return questions[currentQuestionIndex].answer
     }
     var nextQuestion: String {
-        return questions[self.nextIndex()]
+        return questions[self.nextIndex()].text
     }
     var nextAnswer: Int {
-        return answers[self.nextIndex()]
+        return questions[self.nextIndex()].answer
     }
     var previousQuestion: String {
-        return questions[self.previousIndex()]
+        return questions[self.previousIndex()].text
     }
     var previousAnswer: Int {
-        return answers[self.previousIndex()]
+        return questions[self.previousIndex()].answer
     }
     
-    init() {
-        xAxis = "Group"
-        yAxis = "Individual"
-        
-        for i in 1...6 {
-            questions.append("\(xAxis) Question \(i)- How do you rate yourself in regard to this area?")
-            answers.append(5)
-            
-            questions.append("\(yAxis) Question \(i)- How do you rate yourself in regard to this area?")
-            answers.append(5)
+    init(data: NSData) {
+        do {
+            let json = try JSON(data: data)
+            let success = try json.bool("success")
+            print(success)
+            self.title = try json.string("quiz","title")
+            print(title)
+            let shape = try json.string("quiz","type")
+            self.type = Graph.makeShape(shape)
+            print(type)
+            self.questions = try json.array("questions").map(Question.init)
+            print(questions)
+            self.results = try json.array("results").map(Result.init)
+            print(results)
+            self.axis = try json.array("axis").map(Axis.init)
+            print(axis)
+            self.graph = Graph(type: self.type, axis: axis, questions: self.questions, results: self.results)
+            print(graph)
+        } catch {
+            print("POSSIBLY FATAL ERROR: \(error)")
+            title = "ERROR LOADING JSON"
+            type = .Unknown
+            questions = []
+            results = []
+            axis = []
+            graph = nil
         }
-    
     }
     
     func nextIndex() -> Int {

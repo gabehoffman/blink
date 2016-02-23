@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Freddy
 
-class ViewController: UIViewController {
+class AssessmentViewController: UIViewController {
     
-    let blink = BlinkModel()
+    var blink: BlinkModel!
     
     @IBOutlet var currentQuestionLabel: UILabel!
     @IBOutlet var currentQuestionLabelCenterXConstraint: NSLayoutConstraint!
@@ -24,7 +25,7 @@ class ViewController: UIViewController {
     
     @IBAction func showNextQuestion(sender: AnyObject) {
         // Save Current Values
-        blink.answers[blink.currentQuestionIndex] = Int(answerSlider.value)
+        blink.questions[blink.currentQuestionIndex].answer = Int(answerSlider.value)
         
         // Set next question/answer values
         nextQuestionLabel.text = blink.nextQuestion
@@ -43,7 +44,7 @@ class ViewController: UIViewController {
     
     @IBAction func swipePreviousQuestion(sender: AnyObject) {
         // Save Current Value
-        blink.answers[blink.currentQuestionIndex] = Int(answerSlider.value)
+        blink.questions[blink.currentQuestionIndex].answer = Int(answerSlider.value)
         
         // Set previous question/answer values
         nextQuestionLabel.text = blink.previousQuestion
@@ -63,7 +64,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currentQuestionLabel.text = blink.questions[0]
+        let dataURL = NSBundle.mainBundle().URLForResource("generic", withExtension: "json")
+        if let data = getDataFromFileURL(dataURL) {
+            do {
+                let json = try JSON(data: data)
+                print("JSON Loaded")
+                blink = BlinkModel(data: data)
+                print("Blink Model Loaded")
+            } catch {
+                print("\(error)")
+            }
+        } else {
+            print("Could not load data file.")
+        }
+        
+        currentQuestionLabel.text = blink.questions[0].text
         answerLabel.text = "\(blink.currentAnswer)"
         updateOffScreenLabel(false)
     }
@@ -121,4 +136,5 @@ class ViewController: UIViewController {
         })
     }
 }
+
 

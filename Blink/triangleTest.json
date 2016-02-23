@@ -1,0 +1,28 @@
+{
+    "success": true,
+    "quiz": {
+        "title" : "Generic Triangle Assessment Test Alpha",
+        "type" : "Triangle"
+    },
+    "axis" : [  { "id" : 1 , "label" : "Up" },
+                { "id" : 2 , "label" : "In" },
+                { "id" : 3 , "label" : "Out" } ],
+    "questions" : [
+                   { "id" : 1 , "question" : "How do you rate yourself in regard to this area?" },
+                   { "id" : 2 , "question" : "How strong do you feel in regard about this question?" },
+                   { "id" : 3 , "question" : "You always want to answer to this question with a 7." },
+                   { "id" : 4 , "question" : "This is another UP type question" },
+                   { "id" : 5 , "question" : "How liklely is that this is an IN type question?" },
+                   { "id" : 6 , "question" : "If this was an OUT question, how would you rate yourself?" },
+                   { "id" : 7 , "question" : "Answering this question will lead to a brilliant insight. What\'s a number between 0-10?" },
+                   { "id" : 8 , "question" : "How many games will the Falcons win this year?" },
+                   { "id" : 9 , "question" : "Are you smarter than a 5th Grader? What is 10 - 5 * 2 + 9?" },
+                   { "id" : 10 , "question" : "How many presidential elections have you voted in?" },
+                   { "id" : 11 , "question" : "You are almost there, just pick any number." },
+                   { "id" : 12 , "question" : "This is the last question before you see you results, what is 3?" } ],
+    "results" : [
+                 { "id" : 1, "label" : "UP", "questions" : [1, 4, 7, 10] },
+                 { "id" : 2, "label" : "IN", "questions" : [2, 5, 8, 11] },
+                 { "id" : 3, "label" : "OUT", "questions" : [3, 6, 9, 12] } ]
+    
+}

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D41E35C1C65313100DBFA77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D41E35B1C65313100DBFA77 /* AppDelegate.swift */; };
-		3D41E35E1C65313100DBFA77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D41E35D1C65313100DBFA77 /* ViewController.swift */; };
+		3D41E35E1C65313100DBFA77 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D41E35D1C65313100DBFA77 /* AssessmentViewController.swift */; };
 		3D41E3611C65313100DBFA77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D41E35F1C65313100DBFA77 /* Main.storyboard */; };
 		3D41E3641C65313100DBFA77 /* Blink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D41E3621C65313100DBFA77 /* Blink.xcdatamodeld */; };
 		3D41E3661C65313100DBFA77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D41E3651C65313100DBFA77 /* Assets.xcassets */; };
@@ -16,6 +16,21 @@
 		3D41E3741C65313100DBFA77 /* BlinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D41E3731C65313100DBFA77 /* BlinkTests.swift */; };
 		3D41E37F1C65313100DBFA77 /* BlinkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D41E37E1C65313100DBFA77 /* BlinkUITests.swift */; };
 		3D41E38D1C653E1A00DBFA77 /* BlinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D41E38C1C653E1A00DBFA77 /* BlinkModel.swift */; };
+		3D76492E1C7372A000305620 /* triangleTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 3D76492D1C7372A000305620 /* triangleTest.json */; };
+		3D7649301C737E2200305620 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D76492F1C737E2200305620 /* Question.swift */; };
+		3D7649321C737FDE00305620 /* Question+Freddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7649311C737FDE00305620 /* Question+Freddy.swift */; };
+		3D7649341C7384C800305620 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7649331C7384C800305620 /* Result.swift */; };
+		3D7649361C7388CA00305620 /* Result+Freddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7649351C7388CA00305620 /* Result+Freddy.swift */; };
+		3D7649381C73A04100305620 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7649371C73A04100305620 /* Graph.swift */; };
+		3D76493A1C74BA0E00305620 /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7649391C74BA0E00305620 /* Axis.swift */; };
+		3D76493C1C74BAC700305620 /* Axis+Freddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D76493B1C74BAC700305620 /* Axis+Freddy.swift */; };
+		3DAE3A341C6E58830039461D /* UIViewController+SharedBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE3A331C6E58830039461D /* UIViewController+SharedBehavior.swift */; };
+		3DAE3A361C6E5A140039461D /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE3A351C6E5A140039461D /* empty.json */; };
+		3DAE3A381C6E5A8D0039461D /* generic.json in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE3A371C6E5A8D0039461D /* generic.json */; };
+		3DAE3A3A1C6E96010039461D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE3A391C6E96010039461D /* MenuViewController.swift */; };
+		3DAE3A3D1C6F82940039461D /* DataURLLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE3A3C1C6F82940039461D /* DataURLLoadable.swift */; };
+		3DAE3A411C6F84C80039461D /* QuestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE3A401C6F84C80039461D /* QuestionListViewController.swift */; };
+		7D98E49F657DCC4F9BA7BBB4 /* Pods_Blink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EF75724A2D748549F51ED3 /* Pods_Blink.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20EF75724A2D748549F51ED3 /* Pods_Blink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25FE9BC16D105958A316D30C /* Pods-Blink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blink/Pods-Blink.debug.xcconfig"; sourceTree = "<group>"; };
 		3D41E3581C65313100DBFA77 /* Blink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D41E35B1C65313100DBFA77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3D41E35D1C65313100DBFA77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D41E35D1C65313100DBFA77 /* AssessmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
 		3D41E3601C65313100DBFA77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D41E3631C65313100DBFA77 /* Blink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Blink.xcdatamodel; sourceTree = "<group>"; };
 		3D41E3651C65313100DBFA77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +68,21 @@
 		3D41E37E1C65313100DBFA77 /* BlinkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkUITests.swift; sourceTree = "<group>"; };
 		3D41E3801C65313100DBFA77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D41E38C1C653E1A00DBFA77 /* BlinkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlinkModel.swift; sourceTree = "<group>"; };
+		3D76492D1C7372A000305620 /* triangleTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = triangleTest.json; sourceTree = "<group>"; };
+		3D76492F1C737E2200305620 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		3D7649311C737FDE00305620 /* Question+Freddy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Question+Freddy.swift"; sourceTree = "<group>"; };
+		3D7649331C7384C800305620 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		3D7649351C7388CA00305620 /* Result+Freddy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Freddy.swift"; sourceTree = "<group>"; };
+		3D7649371C73A04100305620 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		3D7649391C74BA0E00305620 /* Axis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
+		3D76493B1C74BAC700305620 /* Axis+Freddy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Axis+Freddy.swift"; sourceTree = "<group>"; };
+		3DAE3A331C6E58830039461D /* UIViewController+SharedBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SharedBehavior.swift"; sourceTree = "<group>"; };
+		3DAE3A351C6E5A140039461D /* empty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = empty.json; sourceTree = "<group>"; };
+		3DAE3A371C6E5A8D0039461D /* generic.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = generic.json; sourceTree = "<group>"; };
+		3DAE3A391C6E96010039461D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		3DAE3A3C1C6F82940039461D /* DataURLLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataURLLoadable.swift; sourceTree = "<group>"; };
+		3DAE3A401C6F84C80039461D /* QuestionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionListViewController.swift; sourceTree = "<group>"; };
+		8789990DD4201E05DAC8A742 /* Pods-Blink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blink.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blink/Pods-Blink.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D98E49F657DCC4F9BA7BBB4 /* Pods_Blink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		086438218243EB4B313E4E84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25FE9BC16D105958A316D30C /* Pods-Blink.debug.xcconfig */,
+				8789990DD4201E05DAC8A742 /* Pods-Blink.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3D41E34F1C65313100DBFA77 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +127,8 @@
 				3D41E3721C65313100DBFA77 /* BlinkTests */,
 				3D41E37D1C65313100DBFA77 /* BlinkUITests */,
 				3D41E3591C65313100DBFA77 /* Products */,
+				086438218243EB4B313E4E84 /* Pods */,
+				B8964C5A891B96B8FAE5DFCB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +145,19 @@
 		3D41E35A1C65313100DBFA77 /* Blink */ = {
 			isa = PBXGroup;
 			children = (
+				3DAE3A3F1C6F84870039461D /* Assessment */,
+				3DAE3A3E1C6F845A0039461D /* Question Lists */,
+				3DAE3A3B1C6F82710039461D /* Protocols */,
 				3D41E35B1C65313100DBFA77 /* AppDelegate.swift */,
+				3DAE3A2F1C6E57F60039461D /* Extensions */,
+				3DAE3A301C6E58020039461D /* Models */,
+				3DAE3A311C6E580A0039461D /* Sample JSON */,
+				3DAE3A321C6E58140039461D /* Menu */,
 				3D41E35F1C65313100DBFA77 /* Main.storyboard */,
 				3D41E3671C65313100DBFA77 /* LaunchScreen.storyboard */,
 				3D41E36A1C65313100DBFA77 /* Info.plist */,
 				3D41E3651C65313100DBFA77 /* Assets.xcassets */,
 				3D41E3621C65313100DBFA77 /* Blink.xcdatamodeld */,
-				3D41E35D1C65313100DBFA77 /* ViewController.swift */,
-				3D41E38C1C653E1A00DBFA77 /* BlinkModel.swift */,
 			);
 			path = Blink;
 			sourceTree = "<group>";
@@ -131,6 +180,79 @@
 			path = BlinkUITests;
 			sourceTree = "<group>";
 		};
+		3DAE3A2F1C6E57F60039461D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE3A331C6E58830039461D /* UIViewController+SharedBehavior.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		3DAE3A301C6E58020039461D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D41E38C1C653E1A00DBFA77 /* BlinkModel.swift */,
+				3D76492F1C737E2200305620 /* Question.swift */,
+				3D7649311C737FDE00305620 /* Question+Freddy.swift */,
+				3D7649331C7384C800305620 /* Result.swift */,
+				3D7649351C7388CA00305620 /* Result+Freddy.swift */,
+				3D7649371C73A04100305620 /* Graph.swift */,
+				3D7649391C74BA0E00305620 /* Axis.swift */,
+				3D76493B1C74BAC700305620 /* Axis+Freddy.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		3DAE3A311C6E580A0039461D /* Sample JSON */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE3A351C6E5A140039461D /* empty.json */,
+				3DAE3A371C6E5A8D0039461D /* generic.json */,
+				3D76492D1C7372A000305620 /* triangleTest.json */,
+			);
+			name = "Sample JSON";
+			sourceTree = "<group>";
+		};
+		3DAE3A321C6E58140039461D /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE3A391C6E96010039461D /* MenuViewController.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		3DAE3A3B1C6F82710039461D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE3A3C1C6F82940039461D /* DataURLLoadable.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		3DAE3A3E1C6F845A0039461D /* Question Lists */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE3A401C6F84C80039461D /* QuestionListViewController.swift */,
+			);
+			name = "Question Lists";
+			sourceTree = "<group>";
+		};
+		3DAE3A3F1C6F84870039461D /* Assessment */ = {
+			isa = PBXGroup;
+			children = (
+				3D41E35D1C65313100DBFA77 /* AssessmentViewController.swift */,
+			);
+			name = Assessment;
+			sourceTree = "<group>";
+		};
+		B8964C5A891B96B8FAE5DFCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20EF75724A2D748549F51ED3 /* Pods_Blink.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +260,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D41E3831C65313100DBFA77 /* Build configuration list for PBXNativeTarget "Blink" */;
 			buildPhases = (
+				0CE18BF5E37AC96F45D9D6C1 /* Check Pods Manifest.lock */,
 				3D41E3541C65313100DBFA77 /* Sources */,
 				3D41E3551C65313100DBFA77 /* Frameworks */,
 				3D41E3561C65313100DBFA77 /* Resources */,
+				22B1546B3EF6C9A60CCD9207 /* Embed Pods Frameworks */,
+				3D44734335D1E9D565C63ABB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,8 +363,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D76492E1C7372A000305620 /* triangleTest.json in Resources */,
 				3D41E3691C65313100DBFA77 /* LaunchScreen.storyboard in Resources */,
+				3DAE3A361C6E5A140039461D /* empty.json in Resources */,
 				3D41E3661C65313100DBFA77 /* Assets.xcassets in Resources */,
+				3DAE3A381C6E5A8D0039461D /* generic.json in Resources */,
 				3D41E3611C65313100DBFA77 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,15 +388,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CE18BF5E37AC96F45D9D6C1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		22B1546B3EF6C9A60CCD9207 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blink/Pods-Blink-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D44734335D1E9D565C63ABB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blink/Pods-Blink-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D41E3541C65313100DBFA77 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D41E35E1C65313100DBFA77 /* ViewController.swift in Sources */,
+				3D41E35E1C65313100DBFA77 /* AssessmentViewController.swift in Sources */,
+				3D7649381C73A04100305620 /* Graph.swift in Sources */,
+				3D76493A1C74BA0E00305620 /* Axis.swift in Sources */,
+				3DAE3A3A1C6E96010039461D /* MenuViewController.swift in Sources */,
 				3D41E3641C65313100DBFA77 /* Blink.xcdatamodeld in Sources */,
+				3D7649321C737FDE00305620 /* Question+Freddy.swift in Sources */,
+				3D7649301C737E2200305620 /* Question.swift in Sources */,
+				3DAE3A3D1C6F82940039461D /* DataURLLoadable.swift in Sources */,
+				3D7649361C7388CA00305620 /* Result+Freddy.swift in Sources */,
+				3DAE3A411C6F84C80039461D /* QuestionListViewController.swift in Sources */,
 				3D41E38D1C653E1A00DBFA77 /* BlinkModel.swift in Sources */,
+				3DAE3A341C6E58830039461D /* UIViewController+SharedBehavior.swift in Sources */,
 				3D41E35C1C65313100DBFA77 /* AppDelegate.swift in Sources */,
+				3D7649341C7384C800305620 /* Result.swift in Sources */,
+				3D76493C1C74BAC700305620 /* Axis+Freddy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +595,7 @@
 		};
 		3D41E3841C65313100DBFA77 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25FE9BC16D105958A316D30C /* Pods-Blink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Blink/Info.plist;
@@ -419,6 +607,7 @@
 		};
 		3D41E3851C65313100DBFA77 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8789990DD4201E05DAC8A742 /* Pods-Blink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Blink/Info.plist;
@@ -495,6 +684,7 @@
 				3D41E3851C65313100DBFA77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D41E3861C65313100DBFA77 /* Build configuration list for PBXNativeTarget "BlinkTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +693,7 @@
 				3D41E3881C65313100DBFA77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D41E3891C65313100DBFA77 /* Build configuration list for PBXNativeTarget "BlinkUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +702,7 @@
 				3D41E38B1C65313100DBFA77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

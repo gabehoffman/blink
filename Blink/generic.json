@@ -1,0 +1,76 @@
+{
+    "success": true,
+    "quiz": {
+        "title": "Generic Matrix Assessment Test Alpha",
+        "type": "Matrix"
+    },
+    "axis": [{
+             "id": 1,
+             "label": "Group"
+             }, {
+             "id": 2,
+             "label": "Individual"
+             }],
+    "questions": [{
+                  "id": 1,
+                  "question": "How do you rate yourself in regard to this area?"
+                  }, {
+                  "id": 2,
+                  "question": "How strong do you feel in regard about this question?"
+                  }, {
+                  "id": 3,
+                  "question": "You always want to answer to this question with a 7."
+                  }, {
+                  "id": 4,
+                  "question": "Whatever you do, don't answer this question with a 5"
+                  }, {
+                  "id": 5,
+                  "question": "How well do you think this blink assessment is going?"
+                  }, {
+                  "id": 6,
+                  "question": "What question to do you think we're even on at this point?"
+                  }, {
+                  "id": 7,
+                  "question": "Answering this question will lead to a brilliant insight. What's a number between 0-10?"
+                  }, {
+                  "id": 8,
+                  "question": "How many games will the Falcons win this year?"
+                  }, {
+                  "id": 9,
+                  "question": "Are you smarter than a 5th Grader? What is 10 - 5 * 2 + 9?"
+                  }, {
+                  "id": 10,
+                  "question": "How many presidential elections have you voted in?"
+                  }, {
+                  "id": 11,
+                  "question": "You are almost there, just pick any number."
+                  }, {
+                  "id": 12,
+                  "question": "This is the last question before you see you results, what is 3?"
+                  }],
+    "results": [{
+                "id": 1,
+                "label": "Point 1",
+                "questions": [1, 2]
+                }, {
+                "id": 2,
+                "label": "Point 2",
+                "questions": [3, 4]
+                }, {
+                "id": 3,
+                "label": "Point 3",
+                "questions": [5, 6]
+                }, {
+                "id": 4,
+                "label": "Point 4",
+                "questions": [7, 8]
+                }, {
+                "id": 5,
+                "label": "Point 5",
+                "questions": [9, 10]
+                }, {
+                "id": 6,
+                "label": "Point 6",
+                "questions": [11, 12]
+                }]
+}
