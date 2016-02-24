@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D399ED41C7E2EA100B0CE16 /* ResultListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D399ED31C7E2EA100B0CE16 /* ResultListViewController.swift */; };
+		3D399ED61C7E2EB200B0CE16 /* ResultListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D399ED51C7E2EB200B0CE16 /* ResultListViewCell.swift */; };
 		3D41E35C1C65313100DBFA77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D41E35B1C65313100DBFA77 /* AppDelegate.swift */; };
 		3D41E35E1C65313100DBFA77 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D41E35D1C65313100DBFA77 /* AssessmentViewController.swift */; };
 		3D41E3611C65313100DBFA77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D41E35F1C65313100DBFA77 /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 /* Begin PBXFileReference section */
 		20EF75724A2D748549F51ED3 /* Pods_Blink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FE9BC16D105958A316D30C /* Pods-Blink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blink.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blink/Pods-Blink.debug.xcconfig"; sourceTree = "<group>"; };
+		3D399ED31C7E2EA100B0CE16 /* ResultListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultListViewController.swift; sourceTree = "<group>"; };
+		3D399ED51C7E2EB200B0CE16 /* ResultListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultListViewCell.swift; sourceTree = "<group>"; };
 		3D41E3581C65313100DBFA77 /* Blink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D41E35B1C65313100DBFA77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D41E35D1C65313100DBFA77 /* AssessmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +128,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3D399ED21C7E2E8300B0CE16 /* Result List */ = {
+			isa = PBXGroup;
+			children = (
+				3D399ED31C7E2EA100B0CE16 /* ResultListViewController.swift */,
+				3D399ED51C7E2EB200B0CE16 /* ResultListViewCell.swift */,
+			);
+			name = "Result List";
+			sourceTree = "<group>";
+		};
 		3D41E34F1C65313100DBFA77 = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				3DAE3A3F1C6F84870039461D /* Assessment */,
-				3DAE3A3E1C6F845A0039461D /* Question Lists */,
+				3DAE3A3E1C6F845A0039461D /* Question List */,
+				3D399ED21C7E2E8300B0CE16 /* Result List */,
 				3DAE3A3B1C6F82710039461D /* Protocols */,
 				3D41E35B1C65313100DBFA77 /* AppDelegate.swift */,
 				3DAE3A2F1C6E57F60039461D /* Extensions */,
@@ -234,13 +248,13 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
-		3DAE3A3E1C6F845A0039461D /* Question Lists */ = {
+		3DAE3A3E1C6F845A0039461D /* Question List */ = {
 			isa = PBXGroup;
 			children = (
 				3DAE3A401C6F84C80039461D /* QuestionListViewController.swift */,
 				9FBE4AB71C7D09E6008CD61E /* QuestionListViewCell.swift */,
 			);
-			name = "Question Lists";
+			name = "Question List";
 			sourceTree = "<group>";
 		};
 		3DAE3A3F1C6F84870039461D /* Assessment */ = {
@@ -459,7 +473,9 @@
 				3DAE3A3D1C6F82940039461D /* DataURLLoadable.swift in Sources */,
 				3D7649361C7388CA00305620 /* Result+Freddy.swift in Sources */,
 				3DAE3A411C6F84C80039461D /* QuestionListViewController.swift in Sources */,
+				3D399ED61C7E2EB200B0CE16 /* ResultListViewCell.swift in Sources */,
 				3D41E38D1C653E1A00DBFA77 /* BlinkModel.swift in Sources */,
+				3D399ED41C7E2EA100B0CE16 /* ResultListViewController.swift in Sources */,
 				3DAE3A341C6E58830039461D /* UIViewController+SharedBehavior.swift in Sources */,
 				3D41E35C1C65313100DBFA77 /* AppDelegate.swift in Sources */,
 				3D7649341C7384C800305620 /* Result.swift in Sources */,
@@ -611,6 +627,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tools.hoffman.Blink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "167a280b-300a-46e9-9fd3-d8d8cea39a01";
 			};
 			name = Debug;
 		};
@@ -624,6 +641,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tools.hoffman.Blink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "167a280b-300a-46e9-9fd3-d8d8cea39a01";
 			};
 			name = Release;
 		};

@@ -51,7 +51,8 @@ class BlinkModel {
             self.questions = try json.array("questions").map(Question.init)
             //print(questions)
             self.results = try json.array("results").map(Result.init)
-            //print(results)
+            updateResultValues()
+            print(results)
             self.axis = try json.array("axis").map(Axis.init)
             //print(axis)
             self.graph = Graph(type: self.type, axis: axis, questions: self.questions, results: self.results)
@@ -117,6 +118,46 @@ class BlinkModel {
         } else {
             // return previous question
             return currentQuestionIndex
+        }
+    }
+    
+    func questionWithID(val: Int) -> Question? {
+        for i in questions.indices {
+            if questions[i].id == val {
+                return questions[i]
+            }
+        }
+        return nil
+    }
+    
+    func updateResultValues() {
+        switch type {
+        case .Matrix:
+            for i in results.indices {
+                var resultValues: [Int] = []
+                for j in results[i].questionIDs.indices {
+                    if let question = questionWithID(results[i].questionIDs[j]) {
+                        resultValues.append(question.answer)
+                    }
+                }
+                results[i].rValues = resultValues
+            }
+        case .Triangle, .Pentagon, .Hexagon:
+            for i in results.indices {
+                var resultValues: [Int] = []
+                for j in results[i].questionIDs.indices {
+                    if let question = questionWithID(results[i].questionIDs[j]) {
+                        resultValues.append(question.answer)
+                    }
+                }
+                var average = 0
+                for k in resultValues.indices {
+                    average += resultValues[k]
+                }
+                average = Int( round( Float( average / resultValues.count) ) )
+                results[i].rValues = [average]
+            }
+        case .Unknown: break
         }
     }
 }

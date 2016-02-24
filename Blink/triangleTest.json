@@ -16,40 +16,52 @@
              }],
     "questions": [{
                   "id": 1,
-                  "question": "How do you rate yourself in regard to this area?"
+                  "question": "How do you rate yourself in regard to this area?",
+                  "default": -1
                   }, {
                   "id": 2,
-                  "question": "How strong do you feel in regard about this question?"
+                  "question": "How strong do you feel in regard about this question?",
+                  "default": -1
                   }, {
                   "id": 3,
-                  "question": "You always want to answer to this question with a 7."
+                  "question": "You always want to answer to this question with a 7.",
+                  "default": -1
                   }, {
                   "id": 4,
-                  "question": "This is another UP type question"
+                  "question": "This is another UP type question",
+                  "default": -1
                   }, {
                   "id": 5,
-                  "question": "How liklely is that this is an IN type question?"
+                  "question": "How liklely is that this is an IN type question?",
+                  "default": -1
                   }, {
                   "id": 6,
-                  "question": "If this was an OUT question, how would you rate yourself?"
+                  "question": "If this was an OUT question, how would you rate yourself?",
+                  "default": -1
                   }, {
                   "id": 7,
-                  "question": "Answering this question will lead to a brilliant insight. What's a number between 0-10?"
+                  "question": "Answering this question will lead to a brilliant insight. What's a number between 0-10?",
+                  "default": -1
                   }, {
                   "id": 8,
-                  "question": "How many games will the Falcons win this year?"
+                  "question": "How many games will the Falcons win this year?",
+                  "default": -1
                   }, {
                   "id": 9,
-                  "question": "Are you smarter than a 5th Grader? What is 10 - 5 * 2 + 9?"
+                  "question": "Are you smarter than a 5th Grader? What is 10 - 5 * 2 + 9?",
+                  "default": -1
                   }, {
                   "id": 10,
-                  "question": "How many presidential elections have you voted in?"
+                  "question": "How many presidential elections have you voted in?",
+                  "default": -1
                   }, {
                   "id": 11,
-                  "question": "You are almost there, just pick any number."
+                  "question": "You are almost there, just pick any number.",
+                  "default": -1
                   }, {
                   "id": 12,
-                  "question": "This is the last question before you see you results, what is 3?"
+                  "question": "This is the last question before you see you results, what is 3?",
+                  "default": -1
                   }],
     "results": [{
                 "id": 1,

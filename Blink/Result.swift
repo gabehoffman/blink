@@ -11,11 +11,13 @@ import Foundation
 struct Result {
     let text: String
     let id: Int
-    let questionGrouping: [Int]
+    let questionIDs: [Int]
+    var rValues: [Int]
     
-    init(text: String, id: Int, questionGrouping: [Int]) {
+    init(text: String, id: Int, questionIDs: [Int], rValues: [Int]) {
         self.text = text
         self.id = id
-        self.questionGrouping = questionGrouping
+        self.questionIDs = questionIDs
+        self.rValues = rValues
     }
 }
