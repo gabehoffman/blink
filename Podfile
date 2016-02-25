@@ -4,6 +4,7 @@ use_frameworks!
 target 'Blink' do
 
 pod 'Freddy'
+pod 'Charts'
 
 end
 
