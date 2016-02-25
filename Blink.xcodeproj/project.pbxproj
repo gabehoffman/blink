@@ -34,6 +34,7 @@
 		3DAE3A411C6F84C80039461D /* QuestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE3A401C6F84C80039461D /* QuestionListViewController.swift */; };
 		7D98E49F657DCC4F9BA7BBB4 /* Pods_Blink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EF75724A2D748549F51ED3 /* Pods_Blink.framework */; };
 		83B929561C7FB3F3005282C0 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83B929551C7FB3F3005282C0 /* Charts.framework */; };
+		83B929661C7FBA3C005282C0 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B929651C7FBA3C005282C0 /* GraphViewController.swift */; };
 		9FBE4AB61C7D050B008CD61E /* genericRandomized.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FBE4AB51C7D050B008CD61E /* genericRandomized.json */; };
 		9FBE4AB81C7D09E6008CD61E /* QuestionListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE4AB71C7D09E6008CD61E /* QuestionListViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,7 @@
 		3DAE3A3C1C6F82940039461D /* DataURLLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataURLLoadable.swift; sourceTree = "<group>"; };
 		3DAE3A401C6F84C80039461D /* QuestionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionListViewController.swift; sourceTree = "<group>"; };
 		83B929551C7FB3F3005282C0 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Pods/../build/Debug-iphoneos/Charts.framework"; sourceTree = "<group>"; };
+		83B929651C7FBA3C005282C0 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		8789990DD4201E05DAC8A742 /* Pods-Blink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blink.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blink/Pods-Blink.release.xcconfig"; sourceTree = "<group>"; };
 		9FBE4AB51C7D050B008CD61E /* genericRandomized.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = genericRandomized.json; sourceTree = "<group>"; };
 		9FBE4AB71C7D09E6008CD61E /* QuestionListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionListViewCell.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		3D41E35A1C65313100DBFA77 /* Blink */ = {
 			isa = PBXGroup;
 			children = (
+				83B929571C7FB57A005282C0 /* Graphs */,
 				3DAE3A3F1C6F84870039461D /* Assessment */,
 				3DAE3A3E1C6F845A0039461D /* Question List */,
 				3D399ED21C7E2E8300B0CE16 /* Result List */,
@@ -266,6 +269,14 @@
 				3D41E35D1C65313100DBFA77 /* AssessmentViewController.swift */,
 			);
 			name = Assessment;
+			sourceTree = "<group>";
+		};
+		83B929571C7FB57A005282C0 /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				83B929651C7FBA3C005282C0 /* GraphViewController.swift */,
+			);
+			name = Graphs;
 			sourceTree = "<group>";
 		};
 		B8964C5A891B96B8FAE5DFCB /* Frameworks */ = {
@@ -476,6 +487,7 @@
 				3D7649301C737E2200305620 /* Question.swift in Sources */,
 				3DAE3A3D1C6F82940039461D /* DataURLLoadable.swift in Sources */,
 				3D7649361C7388CA00305620 /* Result+Freddy.swift in Sources */,
+				83B929661C7FBA3C005282C0 /* GraphViewController.swift in Sources */,
 				3DAE3A411C6F84C80039461D /* QuestionListViewController.swift in Sources */,
 				3D399ED61C7E2EB200B0CE16 /* ResultListViewCell.swift in Sources */,
 				3D41E38D1C653E1A00DBFA77 /* BlinkModel.swift in Sources */,

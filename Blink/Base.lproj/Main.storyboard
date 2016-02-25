@@ -158,6 +158,39 @@
             </objects>
             <point key="canvasLocation" x="1418" y="-140"/>
         </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="hKv-bG-TOk">
+            <objects>
+                <viewController storyboardIdentifier="GraphViewController" id="Ddi-HQ-oZj" customClass="GraphViewController" customModule="Blink" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PrE-ZS-ydt"/>
+                        <viewControllerLayoutGuide type="bottom" id="4CI-Jd-NGX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Unn-ZP-aLH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7h-mD-i83" customClass="RadarChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="20" width="560" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="E7h-mD-i83" secondAttribute="trailing" id="eHs-9l-jcC"/>
+                            <constraint firstItem="E7h-mD-i83" firstAttribute="top" secondItem="PrE-ZS-ydt" secondAttribute="bottom" id="pfB-XU-QHi"/>
+                            <constraint firstItem="4CI-Jd-NGX" firstAttribute="top" secondItem="E7h-mD-i83" secondAttribute="bottom" id="xau-J7-vZ8"/>
+                            <constraint firstItem="E7h-mD-i83" firstAttribute="leading" secondItem="Unn-ZP-aLH" secondAttribute="leadingMargin" id="zti-gP-SZz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="radarChartView" destination="E7h-mD-i83" id="OoO-cF-Dbk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cJd-7F-Wk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2078" y="-141"/>
+        </scene>
         <!--Question List View Controller-->
         <scene sceneID="JSE-CK-N1H">
             <objects>
