@@ -14,20 +14,35 @@ extension Result: JSONDecodable {
     init(json value: JSON) throws {
         text = try value.string("label")
         id = try value.int("id")
-        questionGrouping = try value.arrayOf("questions")
+        questionIDs = try value.arrayOf("questions")
+        
+        do {
+            rValues = try value.arrayOf("value")
+            if rValues[0] < 0 {
+                rValues = [Int( arc4random_uniform(10) + 1 )]
+            }
+        } catch {
+            rValues = []
+        }
+        
     }
 }
 
-// NEEDS WORK- NOT FINISHED- QUESTIONS ARRAY NOT OUTPUTTING CORRECT ARRAY TYPE
+// NEEDS WORK- NOT FINISHED- QUESTIONS ARRAY NOT OUTPUTTING CORRECT ARRAY TYPE [Int] currently String
 extension Result: JSONEncodable {
     internal func toJSON() -> JSON {
         var questionsArray: String = ""
-        for i in questionGrouping.indices {
-            questionsArray += "\(questionGrouping[i]),"
+        for i in questionIDs.indices {
+            questionsArray += "\(questionIDs[i]),"
         }
-        return .Dictionary( [   "label":     .String(text),
-            "id":           .Int(id),
-            "questions":    .String(questionsArray)
+        var resultsArray: String = ""
+        for i in rValues.indices {
+            resultsArray += "\(rValues[i]),"
+        }
+        return .Dictionary( [   "label":        .String(text),
+                                "id":           .Int(id),
+                                "questions":    .String(questionsArray),
+                                "value" :       .String(resultsArray)
             ])
     }
 }

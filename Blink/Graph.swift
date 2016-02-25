@@ -53,18 +53,16 @@ class Graph {
         var points: [Point] = []
         if type == .Matrix {
             for i in results.indices {
-                points.append( Point(   x: results[i].questionGrouping[0],
-                                        y: results[i].questionGrouping[1],
+                points.append( Point(   x: results[i].rValues[0],
+                                        y: results[i].rValues[1],
                                         text: results[i].text,
-                                        value: questions[i].answer))
+                                        value: 1))
                 print("Making a point named [\(results[i].text)] at x:\(points[i].x), y:\(points[i].y)")
             }
         } else {
             for i in results.indices {
-                for j in results[i].questionGrouping.indices {
-                    points.append( Point( x: results[i].id, y: results[i].questionGrouping[j], text: results[i].text, value: questions[i].answer ))
-                    print("Making point named [\(results[i].text)] at x:\(results[i].id), y:\(results[i].questionGrouping[j])")
-                }
+                points.append( Point( x: results[i].id, y: results[i].rValues[0], text: results[i].text, value: 1 ))
+                print("Making point named [\(results[i].text)] at x:\(axis[i]), y:\(results[i].rValues[0])")
             }
         }
         return points
