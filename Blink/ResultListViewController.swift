@@ -9,7 +9,7 @@
 import UIKit
 import Freddy
 
-class ResultListViewController: UITableViewController, DataURLLoadable {
+class ResultListViewController: UITableViewController, BlinkModelLoadable {
     
     var dataURL: NSURL?
     var blink: BlinkModel!
@@ -19,14 +19,9 @@ class ResultListViewController: UITableViewController, DataURLLoadable {
         loadBlinkModel()
     }
     
-    private func loadBlinkModel() {
+    func loadBlinkModel() {
         if let data = getDataFromFileURL(self.dataURL) {
-            do {
-                let json = try JSON(data: data)
-                blink = BlinkModel(data: data)
-            } catch {
-                presentError(error)
-            }
+            blink = BlinkModel(data: data)
         } else {
             presentError("Could not load data file.")
         }

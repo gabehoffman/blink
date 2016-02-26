@@ -51,7 +51,7 @@ class MenuViewController : UITableViewController {
         let blinkTestMenu11 = MenuItem(name: "Results w/ Randomized Triangle Data", storyboardID: "ResultListViewController", dataFilename: "triangleTest")
         let blinkTestSection2 = MenuSection(sectionType: .Testing2, items: [blinkTestMenu10, blinkTestMenu11])
         
-        let blinkTestMenu20 = MenuItem(name: "Graph Generic Data Demo", storyboardID: "GraphViewController", dataFilename: "genericRandomized")
+        let blinkTestMenu20 = MenuItem(name: "Graph Generic Data Demo", storyboardID: "MatrixViewController", dataFilename: "genericRandomized")
         let blinkTestMenu21 = MenuItem(name: "Graph Triangle Data Demo", storyboardID: "GraphViewController", dataFilename: "triangleTest")
         let blinkTestSection3 = MenuSection(sectionType: .Testing3, items: [blinkTestMenu20, blinkTestMenu21])
         

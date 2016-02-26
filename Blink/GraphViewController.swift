@@ -9,19 +9,36 @@
 import UIKit
 import Charts
 
-class GraphViewController: UIViewController, DataURLLoadable {
+class GraphViewController: UIViewController, BlinkModelLoadable {
     
     var dataURL: NSURL?
+    var blink: BlinkModel!
     @IBOutlet weak var radarChartView: RadarChartView!
-    var months: [String]!
+    
+    var chartAxis: [String] = []
+    var values: [Double] = []
+    
+    func loadBlinkModel() {
+        if let data = getDataFromFileURL(self.dataURL) {
+            blink = BlinkModel(data: data)
+        } else {
+            presentError("Could not load data file.")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadBlinkModel()
         
-        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+        for i in blink.axis {
+            chartAxis.append(i.label)
+        }
         
-        setChart(months, values: unitsSold)
+        for i in blink.results {
+            values.append(Double( i.rValues.first! ) )
+        }
+        
+        setChart(chartAxis , values: values)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -37,10 +54,12 @@ class GraphViewController: UIViewController, DataURLLoadable {
         }
         
         let chartDataSet = RadarChartDataSet(yVals: dataEntries, label: "Units Sold")
-        let chartData = RadarChartData(xVals: months, dataSet: chartDataSet)
+        let chartData = RadarChartData(xVals: chartAxis, dataSet: chartDataSet)
         radarChartView.data = chartData
         chartDataSet.colors = [UIColor(red: 230/255, green: 126/255, blue: 34/255, alpha: 1)]
         radarChartView.xAxis.labelPosition = .Bottom
+        radarChartView.xAxis.drawGridLinesEnabled = false
+        radarChartView.yAxis.drawGridLinesEnabled = true
         radarChartView.backgroundColor = UIColor(red: 189/255, green: 195/255, blue: 199/255, alpha: 0.5)
         radarChartView.animate(xAxisDuration: 2.0, yAxisDuration: 2.0)
     }

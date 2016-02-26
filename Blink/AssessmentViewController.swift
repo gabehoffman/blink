@@ -9,7 +9,7 @@
 import UIKit
 import Freddy
 
-class AssessmentViewController: UIViewController, DataURLLoadable {
+class AssessmentViewController: UIViewController, BlinkModelLoadable {
     
     var dataURL: NSURL?
     var blink: BlinkModel!
@@ -23,6 +23,13 @@ class AssessmentViewController: UIViewController, DataURLLoadable {
     @IBOutlet var answerLabel: UILabel!
     @IBOutlet var answerSlider: UISlider!
     
+    func loadBlinkModel() {
+        if let data = getDataFromFileURL(self.dataURL) {
+            blink = BlinkModel(data: data)
+        } else {
+            presentError("Could not load data file.")
+        }
+    }
     
     @IBAction func showNextQuestion(sender: AnyObject) {
         // Save Current Values
@@ -64,19 +71,7 @@ class AssessmentViewController: UIViewController, DataURLLoadable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let data = getDataFromFileURL(dataURL) {
-            do {
-                let json = try JSON(data: data)
-                print("JSON Loaded")
-                blink = BlinkModel(data: data)
-                print("Blink Model Loaded")
-            } catch {
-                print("\(error)")
-            }
-        } else {
-            print("Could not load data file.")
-        }
+        loadBlinkModel()
         
         currentQuestionLabel.text = blink.questions[0].text
         answerLabel.text = "\(blink.currentAnswer)"
