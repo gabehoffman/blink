@@ -191,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="2078" y="-141"/>
         </scene>
-        <!--View Controller-->
+        <!--Matrix View Controller-->
         <scene sceneID="OUE-Uf-yFd">
             <objects>
-                <viewController id="bUW-Kh-qC2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MatrixViewController" id="bUW-Kh-qC2" customClass="MatrixViewController" customModule="Blink" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Exl-FE-sc6"/>
                         <viewControllerLayoutGuide type="bottom" id="70d-h5-7oh"/>
@@ -241,6 +241,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="yGridStrokeWeight">
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pointFontSize">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -250,6 +253,9 @@
                             <constraint firstItem="Kg1-s2-60S" firstAttribute="centerX" secondItem="eff-AF-fbt" secondAttribute="centerX" id="gV2-Wx-5cL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="matrixView" destination="Kg1-s2-60S" id="Jcl-Ac-jVS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XOD-zd-aFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

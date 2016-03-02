@@ -21,6 +21,7 @@ class MatrixViewController: UIViewController, BlinkModelLoadable {
     
     var dataURL: NSURL?
     var blink: BlinkModel!
+    @IBOutlet weak var matrixView: MatrixView!
     
     var chartAxis: [String] = []
     var values: [Double] = []
@@ -50,6 +51,8 @@ class MatrixViewController: UIViewController, BlinkModelLoadable {
     }
     
     func setChart(dataPoints: [String], values: [Double]) {
+        
+        matrixView.graph = blink.graph
+        
     }
-    
 }

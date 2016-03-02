@@ -12,6 +12,11 @@ import Charts
 @IBDesignable class MatrixView: UIView {
     
     var graph: Graph!
+    var rect: CGRect!
+    var labels: [UILabel] = []
+    var points: [CGRect] = []
+    var labelsCollisionCount: [Int] = []
+    let π:CGFloat = CGFloat(M_PI)
     
     @IBInspectable var maxXValue: Int = 10
     @IBInspectable var minXValue: Int = 0
@@ -27,35 +32,67 @@ import Charts
     @IBInspectable var yGridStrokeWeight: CGFloat = 1.0
     @IBInspectable var xGrid: Bool = true
     @IBInspectable var yGrid: Bool = true
-    @IBInspectable var xColor: UIColor = UIColor.blueColor()
+    @IBInspectable var xColor: UIColor = UIColor.orangeColor()
     @IBInspectable var yColor: UIColor = UIColor.orangeColor()
+    @IBInspectable var xHashColor: UIColor = UIColor.blackColor()
+    @IBInspectable var yHashColor: UIColor = UIColor.blackColor()
+    @IBInspectable var xGridColor: UIColor = UIColor.lightGrayColor()
+    @IBInspectable var yGridColor: UIColor = UIColor.lightGrayColor()
+    @IBInspectable var pointColor: UIColor = UIColor.blueColor()
+    @IBInspectable var pointFontSize: CGFloat = 12
+    
+    
+    var unitXDistance: CGFloat = 20
+    var unitYDistance: CGFloat = 20
     
     override func drawRect(rect: CGRect) {
+        self.rect = rect
         let center = CGPoint(x:bounds.width/2, y: bounds.height/2)
         let centerX = bounds.height / 2 + 0.5
         let centerY = bounds.width / 2 + 0.5
         let matrixWidth: CGFloat = bounds.width
         let matrixHeight: CGFloat = bounds.height
+        unitXDistance = bounds.width / CGFloat(maxXValue)
+        unitYDistance = bounds.width / CGFloat(maxXValue)
         
         print(center)
         
         drawAxis(matrixHeight, width: matrixWidth, centerX: centerX, centerY: centerY)
 
-        //plotPointAt("point", x:7, y:6)
+        if graph == nil {
+            // Plot points for Interface Builder
+            plotPointAt("Point 1", x:7, y:6)
+            plotPointAt("Point 2", x:2, y:6)
+            plotPointAt("Point 3", x:8, y:8)
+            plotPointAt("Point 4", x:3, y:1)
+            plotPointAt("Point 5", x:4, y:4)
+            plotPointAt("Point 6", x:7, y:6)
+            plotPointAt("Point 7", x:7, y:6)
+            plotPointAt("Point 8", x:7, y:6)
+            plotPointAt("Point 9", x:7, y:7)
+            plotPointAt("Point 10", x:7, y:8)
+            plotPointAt("Point 11", x:7, y:8)
+            plotPointAt("Point 12", x:10, y:6)
+        } else {
+            for point in graph.points {
+                print(point)
+                plotPointAt(point.text, x: point.x, y: point.y)
+            }
+        }
     }
     
     func drawAxis(height: CGFloat, width: CGFloat, centerX: CGFloat, centerY: CGFloat) {
         // Draw X/Y Background Grid Lines
-        drawYGridLines(height)
-        drawXGridLines(width)
+        //drawYGridLines(height)
+        //drawXGridLines(width)
         
         // Draw X/Y Axis Lines
         drawYAxis(height, centerX: centerX, centerY: centerY)
         drawXAxis(width, centerX: centerX, centerY: centerY)
         
         // Draw X/Y Axis Hash Marks
-        drawYAxisMarks(height, centerX: centerX, centerY: centerY)
-        drawXAxisMarks(width, centerX: centerX, centerY: centerY)
+        drawYHashMarks(height, centerX: centerX, centerY: centerY)
+        drawXHashMarks(width, centerX: centerX, centerY: centerY)
         
 
     }
@@ -106,7 +143,7 @@ import Charts
         
     }
     
-    func drawXAxisMarks(width: CGFloat, centerX: CGFloat, centerY: CGFloat) {
+    func drawXHashMarks(width: CGFloat, centerX: CGFloat, centerY: CGFloat) {
         
         //create the path
         let hashXPath = UIBezierPath()
@@ -114,7 +151,7 @@ import Charts
         //set the path's line width to the height of the stroke
         hashXPath.lineWidth = xHashStrokeWeight
         
-        let hashStepDistance = width / CGFloat(maxXValue)
+        let hashStepDistance = unitXDistance
         var xPoint: CGFloat = 0.5
         
         for _ in minXValue...maxXValue {
@@ -144,14 +181,14 @@ import Charts
         }
         
         //set the stroke color
-        xColor.setStroke()
+        xHashColor.setStroke()
         
         //draw the stroke
         hashXPath.stroke()
         
     }
     
-    func drawYAxisMarks(height: CGFloat, centerX: CGFloat, centerY: CGFloat)    {
+    func drawYHashMarks(height: CGFloat, centerX: CGFloat, centerY: CGFloat)    {
         
         //create the path
         let hashYPath = UIBezierPath()
@@ -159,7 +196,7 @@ import Charts
         //set the path's line width to the height of the stroke
         hashYPath.lineWidth = yHashStrokeWeight
         
-        let hashStepDistance = height / CGFloat(maxXValue)
+        let hashStepDistance = unitYDistance
         var yPoint: CGFloat = 0.5
         
         for _ in minXValue...maxXValue {
@@ -188,7 +225,7 @@ import Charts
         }
         
         //set the stroke color
-        yColor.setStroke()
+        yHashColor.setStroke()
         
         //draw the stroke
         hashYPath.stroke()
@@ -203,7 +240,7 @@ import Charts
         //set the path's line width to the height of the stroke
         hashXPath.lineWidth = xGridStrokeWeight
         
-        let hashStepDistance = width / CGFloat(maxXValue)
+        let hashStepDistance = unitXDistance
         var xPoint: CGFloat = 0.5
         
         for _ in minXValue...maxXValue {
@@ -233,7 +270,7 @@ import Charts
         }
         
         //set the stroke color
-        xColor.setStroke()
+        xGridColor.setStroke()
         
         //draw the stroke
         hashXPath.stroke()
@@ -249,7 +286,7 @@ import Charts
         //set the path's line width to the height of the stroke
         hashYPath.lineWidth = yGridStrokeWeight
         
-        let hashStepDistance = height / CGFloat(maxXValue)
+        let hashStepDistance = unitYDistance
         var yPoint: CGFloat = 0.5
         
         for _ in minXValue...maxXValue {
@@ -278,11 +315,84 @@ import Charts
         }
         
         //set the stroke color
-        yColor.setStroke()
+        yGridColor.setStroke()
         
         //draw the stroke
         hashYPath.stroke()
         
     }
     
+    func plotPointAt(label: String, x: Int, y: Int) {
+        
+        let pointX: CGFloat = CGFloat(x) * unitXDistance + 0.5
+        let pointY: CGFloat = bounds.height - CGFloat(y) * unitYDistance + 0.5
+        
+        let center = CGPoint(x: pointX, y: pointY)
+        let radius: CGFloat = max(8,8 )
+        let arcWidth: CGFloat = 4
+        let startAngle: CGFloat = 0
+        let endAngle: CGFloat = 2 * π
+        let path = UIBezierPath(arcCenter: center,
+            radius: radius/2 - arcWidth/2,
+            startAngle: startAngle,
+            endAngle: endAngle,
+            clockwise: true)
+        path.lineWidth = arcWidth
+        pointColor.setStroke()
+        path.stroke()
+        points.append(path.bounds)
+        
+        
+        let labelWidth: CGFloat = CGFloat(label.characters.count) * pointFontSize * 0.5
+        var labelX = pointX - (labelWidth / 2)
+        var labelY = pointY + 4
+        if labelX + labelWidth > bounds.width {
+            labelX -= labelWidth / 2
+        }
+        if labelY + pointFontSize > bounds.height{
+            labelY -= pointFontSize * 2
+        }
+        let pointLabel = UILabel(frame: CGRectMake(labelX, labelY, labelWidth, pointFontSize))
+        pointLabel.text = label
+        pointLabel.textAlignment = NSTextAlignment.Center
+        pointLabel.textColor = pointColor
+        //pointLabel.backgroundColor = UIColor.lightGrayColor()
+        pointLabel.font = pointLabel.font.fontWithSize(pointFontSize)
+        fixLabelCollisions(pointLabel)
+        labels.append(pointLabel)
+        labelsCollisionCount.append(0)
+        self.addSubview(pointLabel)
+    }
+    
+    func fixLabelCollisions(label: UILabel) {
+        let adjustment: CGFloat = 8
+        for i in labels.indices {
+            if CGRectIntersectsRect(labels[i].frame, label.frame) {
+                labelsCollisionCount[i]++
+                if (labelsCollisionCount[i] == 8) {
+                    //label.frame.offsetInPlace(dx: 0, dy: -10)
+                }
+                if (labelsCollisionCount[i] == 3) {
+                    label.frame.offsetInPlace(dx: label.frame.width / 2 + adjustment, dy: -pointFontSize)
+                }
+                if (labelsCollisionCount[i] == 2) {
+                    label.frame.offsetInPlace(dx: -label.frame.width / 2  - adjustment, dy: -pointFontSize)
+                }
+                if (labelsCollisionCount[i] == 1) {
+                    label.frame.offsetInPlace(dx: 0, dy: -pointFontSize * 2)
+                }
+            }
+        }
+    }
+    
+    func isOutOfBounds(label: UILabel) -> Bool {
+        var isOut = false
+        if label.frame.maxX > bounds.width ||
+            label.frame.minX < 0 {
+            isOut = true
+        }
+        print("\(label.text) maxX = \(label.frame.maxX)")
+        return isOut
+    }
+
 }
