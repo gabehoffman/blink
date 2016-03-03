@@ -33,6 +33,7 @@
 		3DAE3A3D1C6F82940039461D /* DataURLLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE3A3C1C6F82940039461D /* DataURLLoadable.swift */; };
 		3DAE3A411C6F84C80039461D /* QuestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE3A401C6F84C80039461D /* QuestionListViewController.swift */; };
 		7D98E49F657DCC4F9BA7BBB4 /* Pods_Blink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EF75724A2D748549F51ED3 /* Pods_Blink.framework */; };
+		832F08A51C879B09000A850B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F08A41C879B09000A850B /* WelcomeViewController.swift */; };
 		83764F2C1C80ADE000412359 /* BlinkModelLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83764F2B1C80ADE000412359 /* BlinkModelLoadable.swift */; };
 		83764F311C80F1BF00412359 /* MatrixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83764F301C80F1BF00412359 /* MatrixViewController.swift */; };
 		83764F331C80F1CF00412359 /* MatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83764F321C80F1CF00412359 /* MatrixView.swift */; };
@@ -93,6 +94,7 @@
 		3DAE3A391C6E96010039461D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3DAE3A3C1C6F82940039461D /* DataURLLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataURLLoadable.swift; sourceTree = "<group>"; };
 		3DAE3A401C6F84C80039461D /* QuestionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionListViewController.swift; sourceTree = "<group>"; };
+		832F08A41C879B09000A850B /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		83764F2B1C80ADE000412359 /* BlinkModelLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlinkModelLoadable.swift; sourceTree = "<group>"; };
 		83764F301C80F1BF00412359 /* MatrixViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixViewController.swift; sourceTree = "<group>"; };
 		83764F321C80F1CF00412359 /* MatrixView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		3D41E35A1C65313100DBFA77 /* Blink */ = {
 			isa = PBXGroup;
 			children = (
+				832F08A31C879AE7000A850B /* Welcome */,
 				83B929571C7FB57A005282C0 /* Graphs */,
 				3DAE3A3F1C6F84870039461D /* Assessment */,
 				3DAE3A3E1C6F845A0039461D /* Question List */,
@@ -276,6 +279,14 @@
 				3D41E35D1C65313100DBFA77 /* AssessmentViewController.swift */,
 			);
 			name = Assessment;
+			sourceTree = "<group>";
+		};
+		832F08A31C879AE7000A850B /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				832F08A41C879B09000A850B /* WelcomeViewController.swift */,
+			);
+			name = Welcome;
 			sourceTree = "<group>";
 		};
 		83B929571C7FB57A005282C0 /* Graphs */ = {
@@ -491,6 +502,7 @@
 				3D76493A1C74BA0E00305620 /* Axis.swift in Sources */,
 				3DAE3A3A1C6E96010039461D /* MenuViewController.swift in Sources */,
 				83764F2C1C80ADE000412359 /* BlinkModelLoadable.swift in Sources */,
+				832F08A51C879B09000A850B /* WelcomeViewController.swift in Sources */,
 				9FBE4AB81C7D09E6008CD61E /* QuestionListViewCell.swift in Sources */,
 				83764F311C80F1BF00412359 /* MatrixViewController.swift in Sources */,
 				3D41E3641C65313100DBFA77 /* Blink.xcdatamodeld in Sources */,
