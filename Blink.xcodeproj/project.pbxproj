@@ -34,6 +34,7 @@
 		3DAE3A411C6F84C80039461D /* QuestionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE3A401C6F84C80039461D /* QuestionListViewController.swift */; };
 		7D98E49F657DCC4F9BA7BBB4 /* Pods_Blink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EF75724A2D748549F51ED3 /* Pods_Blink.framework */; };
 		832F08A51C879B09000A850B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F08A41C879B09000A850B /* WelcomeViewController.swift */; };
+		832F08A71C88E58C000A850B /* hexagonTest.json in Resources */ = {isa = PBXBuildFile; fileRef = 832F08A61C88E58C000A850B /* hexagonTest.json */; };
 		83764F2C1C80ADE000412359 /* BlinkModelLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83764F2B1C80ADE000412359 /* BlinkModelLoadable.swift */; };
 		83764F311C80F1BF00412359 /* MatrixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83764F301C80F1BF00412359 /* MatrixViewController.swift */; };
 		83764F331C80F1CF00412359 /* MatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83764F321C80F1CF00412359 /* MatrixView.swift */; };
@@ -95,6 +96,7 @@
 		3DAE3A3C1C6F82940039461D /* DataURLLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataURLLoadable.swift; sourceTree = "<group>"; };
 		3DAE3A401C6F84C80039461D /* QuestionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionListViewController.swift; sourceTree = "<group>"; };
 		832F08A41C879B09000A850B /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		832F08A61C88E58C000A850B /* hexagonTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hexagonTest.json; sourceTree = "<group>"; };
 		83764F2B1C80ADE000412359 /* BlinkModelLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlinkModelLoadable.swift; sourceTree = "<group>"; };
 		83764F301C80F1BF00412359 /* MatrixViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixViewController.swift; sourceTree = "<group>"; };
 		83764F321C80F1CF00412359 /* MatrixView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixView.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				3DAE3A371C6E5A8D0039461D /* generic.json */,
 				3D76492D1C7372A000305620 /* triangleTest.json */,
 				9FBE4AB51C7D050B008CD61E /* genericRandomized.json */,
+				832F08A61C88E58C000A850B /* hexagonTest.json */,
 			);
 			name = "Sample JSON";
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				3DAE3A381C6E5A8D0039461D /* generic.json in Resources */,
 				9FBE4AB61C7D050B008CD61E /* genericRandomized.json in Resources */,
 				3D41E3611C65313100DBFA77 /* Main.storyboard in Resources */,
+				832F08A71C88E58C000A850B /* hexagonTest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

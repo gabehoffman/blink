@@ -9,5 +9,13 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("Preparing for Seque")
+        if segue.identifier == "startBlink" {
+            var vc = segue.destinationViewController as! DataURLLoadable
+            vc.dataURL = NSBundle.mainBundle().URLForResource("hexagonTest", withExtension: "json")
+        }
+    }
 
 }

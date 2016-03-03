@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="690" y="-140"/>
         </scene>
-        <!--View Controller-->
+        <!--WelcomeViewController-->
         <scene sceneID="EOB-cS-axk">
             <objects>
-                <viewController id="Cdh-1k-Dyt" sceneMemberID="viewController">
+                <viewController title="WelcomeViewController" id="Cdh-1k-Dyt" customClass="WelcomeViewController" customModule="Blink" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R1T-4R-hxn"/>
                         <viewControllerLayoutGuide type="bottom" id="4Vz-2Q-Iht"/>
@@ -56,12 +56,59 @@
                     <view key="view" contentMode="scaleToFill" id="VcZ-Fv-6dW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="100Movements-Banner" translatesAutoresizingMaskIntoConstraints="NO" id="ydE-4Q-aZO">
+                                <rect key="frame" x="0.0" y="72" width="600" height="528"/>
+                                <color key="backgroundColor" red="0.16078431372549021" green="0.12156862745098039" blue="0.23921568627450981" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fiq-iH-gh3">
+                                <rect key="frame" x="570" y="72" width="30" height="30"/>
+                                <state key="normal" title="π">
+                                    <color key="titleColor" red="0.3411764705882353" green="0.2627450980392157" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lTl-qz-xJG" kind="show" id="aEq-8w-CSb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCU-d1-YYT">
+                                <rect key="frame" x="254" y="548" width="93" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="About 100M">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTo-sh-3T0">
+                                <rect key="frame" x="249" y="496" width="103" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Take the Quiz">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="startBlink" id="y5S-fi-gUP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ydE-4Q-aZO" firstAttribute="leading" secondItem="VcZ-Fv-6dW" secondAttribute="leading" id="4pz-4E-4un"/>
+                            <constraint firstItem="4Vz-2Q-Iht" firstAttribute="top" secondItem="sCU-d1-YYT" secondAttribute="bottom" constant="20" id="5BD-so-2jk"/>
+                            <constraint firstItem="sCU-d1-YYT" firstAttribute="centerX" secondItem="VcZ-Fv-6dW" secondAttribute="centerX" id="9DX-B2-Bnk"/>
+                            <constraint firstAttribute="trailing" secondItem="ydE-4Q-aZO" secondAttribute="trailing" id="BaJ-Em-ogo"/>
+                            <constraint firstItem="4Vz-2Q-Iht" firstAttribute="top" secondItem="ydE-4Q-aZO" secondAttribute="bottom" id="ILP-G3-5Vt"/>
+                            <constraint firstAttribute="trailing" secondItem="Fiq-iH-gh3" secondAttribute="trailing" id="Wil-OY-1yy"/>
+                            <constraint firstItem="BTo-sh-3T0" firstAttribute="centerX" secondItem="VcZ-Fv-6dW" secondAttribute="centerX" id="YqI-SO-RfF"/>
+                            <constraint firstItem="Fiq-iH-gh3" firstAttribute="top" secondItem="R1T-4R-hxn" secondAttribute="bottom" constant="8" id="ZhQ-U1-Is9"/>
+                            <constraint firstItem="sCU-d1-YYT" firstAttribute="top" secondItem="BTo-sh-3T0" secondAttribute="bottom" constant="20" id="wAs-ha-OzW"/>
+                            <constraint firstItem="ydE-4Q-aZO" firstAttribute="top" secondItem="R1T-4R-hxn" secondAttribute="bottom" constant="8" id="ylZ-u3-sMS"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="100 Movements" id="Ml6-h5-CPE">
+                        <barButtonItem key="backBarButtonItem" title="100M" id="pK2-6V-Jfi"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3J4-I6-aOg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="687" y="568"/>
+            <point key="canvasLocation" x="-130" y="627"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oRc-3Z-bdO">
@@ -72,7 +119,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="lTl-qz-xJG" kind="relationship" relationship="rootViewController" id="tH4-1A-fJX"/>
+                        <segue destination="Cdh-1k-Dyt" kind="relationship" relationship="rootViewController" id="aXo-1P-Utw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O2n-fK-sPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -424,4 +471,7 @@
             <point key="canvasLocation" x="2074" y="545"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="100Movements-Banner" width="1998" height="958"/>
+    </resources>
 </document>

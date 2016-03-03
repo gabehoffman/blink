@@ -43,17 +43,20 @@ class MenuViewController : UITableViewController {
         
         let blinkTestMenu1 = MenuItem(name: "Questions w/ Generic Data", storyboardID: "QuestionListViewController", dataFilename: "generic")
         let blinkTestMenu2 = MenuItem(name: "Questions w/ Triangle Data", storyboardID: "QuestionListViewController", dataFilename: "triangleTest")
+        let blinkTestMenu3 = MenuItem(name: "Questions w/ Hexagon Data", storyboardID: "QuestionListViewController", dataFilename: "hexagonTest")
         let blinkTestMenu5 = MenuItem(name: "Questions Data (Missing Key)", storyboardID: "QuestionListViewController", dataFilename: "generic")
         let blinkTestMenu6 = MenuItem(name: "Questions Data (Bad Type)", storyboardID: "QuestionListViewController", dataFilename: "generic")
-        let blinkTestSection1 = MenuSection(sectionType: .Testing1, items: [blinkTestMenu1, blinkTestMenu2, blinkTestMenu5, blinkTestMenu6])
+        let blinkTestSection1 = MenuSection(sectionType: .Testing1, items: [blinkTestMenu1, blinkTestMenu2, blinkTestMenu3, blinkTestMenu5, blinkTestMenu6])
         
         let blinkTestMenu10 = MenuItem(name: "Results w/ Randomized Generic Data", storyboardID: "ResultListViewController", dataFilename: "genericRandomized")
         let blinkTestMenu11 = MenuItem(name: "Results w/ Randomized Triangle Data", storyboardID: "ResultListViewController", dataFilename: "triangleTest")
-        let blinkTestSection2 = MenuSection(sectionType: .Testing2, items: [blinkTestMenu10, blinkTestMenu11])
+        let blinkTestMenu12 = MenuItem(name: "Results w/ Randomized Hexagon Data", storyboardID: "ResultListViewController", dataFilename: "hexagonTest")
+        let blinkTestSection2 = MenuSection(sectionType: .Testing2, items: [blinkTestMenu10, blinkTestMenu11, blinkTestMenu12])
         
         let blinkTestMenu20 = MenuItem(name: "Graph Generic Data Demo", storyboardID: "MatrixViewController", dataFilename: "genericRandomized")
         let blinkTestMenu21 = MenuItem(name: "Graph Triangle Data Demo", storyboardID: "GraphViewController", dataFilename: "triangleTest")
-        let blinkTestSection3 = MenuSection(sectionType: .Testing3, items: [blinkTestMenu20, blinkTestMenu21])
+        let blinkTestMenu22 = MenuItem(name: "Graph Hexagon Data Demo", storyboardID: "GraphViewController", dataFilename: "hexagonTest")
+        let blinkTestSection3 = MenuSection(sectionType: .Testing3, items: [blinkTestMenu20, blinkTestMenu21, blinkTestMenu22])
         
         let oneHundredMenu1 = MenuItem(name: "100M Questions", storyboardID: "QuestionListViewController", dataFilename: "generic")
         let oneHundredMenu2 = MenuItem(name: "100M Questions (Missing Key)", storyboardID: "QuestionListViewController", dataFilename: "generic")
